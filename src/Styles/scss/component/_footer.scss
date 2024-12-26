@@ -1,0 +1,196 @@
+#footer {
+    background-color: var(--Secondary);
+    padding-top: 60px;
+    .footer-top {
+        @include flex(center, space-between);
+        padding-bottom: 34px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        flex-wrap: wrap;
+        gap: 30px 20px;
+        .footer-contact {
+            @include d-flex();
+            gap: 20px 48px;
+            flex-wrap: wrap;
+        }
+        .contact-item {
+            @include d-flex();
+            gap: 33px;
+            svg path {
+                stroke: var(--Primary);
+            }
+            .content {
+                position: relative;
+                .title {
+                    color: var(--Note);
+                    margin-bottom: 4px;
+                }
+                h6 {
+                    color: var(--White);
+                }
+                &::after {
+                    content: "";
+                    position: absolute;
+                    width: 1px;
+                    height: 51px;
+                    background-color: rgba(255, 255, 255, 0.07);
+                    top: 0;
+                    left: -18px;
+                }
+            }
+        }
+    }
+    .footer-main {
+        padding: 40px 0 22px;
+    }
+    .footer-menu-list {
+        .title {
+            color: var(--White);
+            margin-bottom: 24px;
+        }
+        ul {
+            li {
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+                a {
+                    font-size: 16px;
+                    line-height: 22.4px;
+                    color: var(--Note);
+                }
+                &:hover {
+                    a {
+                        color: var(--Primary);
+                    }
+                }
+            }
+        }
+        &.style-2 {
+            ul {
+                li {
+                    a {
+                        padding-left: 20px;
+                        position: relative;
+                        background-color: var(--Secondary);
+                        @include transition3();
+                        z-index: 3;
+                        &::after {
+                            content: "\e908";
+                            position: absolute;
+                            font-family: $fontIcon;
+                            font-size: 16px;
+                            color: var(--Primary);
+                            font-size: 12px;
+                            margin-right: 11px;
+                            left: 0;
+                            @include transition3();
+                            z-index: 1;
+                        }
+                    }
+                    &:hover {
+                        a {
+                            padding-left: 0;
+                            &::after {
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .form-newsletter {
+            p {
+                margin-bottom: 16px;
+            }
+            fieldset input {
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                border-radius: 10px;
+                background-color: transparent;
+                margin-bottom: 11px;
+            }
+            .tf-btn {
+                height: 54px;
+                border-radius: 10px;
+                margin-bottom: 16px;
+                border: 1px solid var(--Primary);
+                &:hover {
+                    border: 1px solid var(--Primary);
+                }
+            }
+            .checkbox-item {
+                label {
+                    .btn-checkbox {
+                        &::after {
+                            top: -2px;
+                        }
+                    }
+                }
+                span {
+                    color: var(--Text);
+                }
+            }
+        }
+    }
+    .footer-bottom {
+        @include flex(center, space-between);
+        padding: 24px 0 24px;
+        border-top: 1px solid rgba(255, 255, 255, 0.07);
+        gap: 10px 20px;
+        flex-wrap: wrap;
+        p {
+            a {
+                color: var(--Text);
+                &:hover {
+                    color: var(--Primary);
+                }
+            }
+        }
+    }
+    .wrap-social {
+        gap: 16px;
+    }
+    .footer-logo {
+        img {
+            width: 136px;
+            height: 42px;
+        }
+    }
+}
+
+.footer-col-block {
+    .title-mobile {
+        display: none;
+        position: relative;
+        &::after {
+            position: absolute;
+            content: "";
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 1px;
+            background-color: var(--White);
+            transition: 0.25s ease-in-out;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            right: 15px;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 1px;
+            height: 12px;
+            background-color: var(--White);
+            transition: 0.25s ease-in-out;
+        }
+    }
+    &.open {
+        .title-mobile {
+            &::before {
+                opacity: 0;
+            }
+            &::after {
+                transform: translate(0%, -50%) rotate(-180deg);
+            }
+        }
+    }
+}

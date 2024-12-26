@@ -1,5 +1,5 @@
 import React from 'react'
-import Head from '../../Components/Pages/Head'
+import Head from '../../Components/Common/Head'
 
 
 const BlogList = () => {

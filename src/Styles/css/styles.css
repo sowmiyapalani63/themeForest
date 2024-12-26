@@ -2792,7 +2792,7 @@ form label {
 .form-pre-approved .nice-select::after {
   width: 20px;
   height: 20px;
-  background-image: url(../icons/arrow-down-2.svg);
+  background-image: url(../../Assests//icons/arrow-down-2.svg);
   right: 15px;
 }
 .form-pre-approved fieldset input::placeholder {
@@ -4671,7 +4671,7 @@ tr {
   right: 10px;
   top: 50%;
   color: var(--Text);
-  background-image: url(../icons/arrow-down.svg);
+  background-image: url(../../Assests//icons//arrow-down.svg);
   position: absolute;
   transform: translateY(-50%) rotate(0);
   -webkit-transition: all 0.3s ease;
@@ -4795,7 +4795,7 @@ tr {
   border: none;
 }
 .nice-select.select-sort::after {
-  background-image: url(../icons/arrow-down-2.svg);
+  background-image: url(../../Assests//icons//arrow-down-2.svg);
   top: 50%;
   transform: translateY(-50%);
   width: 20px;
@@ -7525,7 +7525,7 @@ tr {
 .wg-appraisal .content::after {
   content: "";
   position: absolute;
-  background-image: url(../images/section/cta-1.png);
+  background-image: url(../../Assests//images//section/cta-1.png);
   width: 100%;
   height: 100%;
   top: 0;
@@ -7542,7 +7542,7 @@ tr {
   margin-top: 0;
 }
 .wg-appraisal.style-2 .content {
-  background-image: url(../images/section/section-appraisal.jpg);
+  background-image: url(../../Assests/images/section/section-appraisal.jpg);
 }
 .wg-appraisal.style-2 .content::after {
   display: none;
@@ -7558,7 +7558,7 @@ tr {
   max-width: 591px;
 }
 .wg-appraisal.style-3 .content::after {
-  background-image: url(../images/section/cta-2.png);
+  background-image: url(../../Assests/images/section/cta-2.png);
   bottom: 0;
   top: unset;
   background-size: cover;
@@ -8379,7 +8379,7 @@ tr {
   font-weight: 400;
 }
 .page-title.home01, .page-title.home05, .page-title.career {
-  background-image: url(../images/section/page-title-1.jpg);
+  background-image: url(../../Assests/images/section/page-title-1.jpg);
   background-attachment: fixed;
   padding: 154px 0 258px;
   background-size: cover;
@@ -8414,7 +8414,7 @@ tr {
   cursor: pointer;
 }
 .page-title.home02 {
-  background-image: url(../images/section/page-title-2.jpg);
+  background-image: url(../../Assests//images/section/page-title-2.jpg);
   padding: 232px 0 294px;
   background-size: cover;
   background-attachment: fixed;
@@ -8443,7 +8443,7 @@ tr {
   border-color: var(--Primary);
 }
 .page-title.home03 {
-  background-image: url(../images/section/page-title-3.jpg);
+  background-image: url(../../Assests/images/section/page-title-3.jpg);
   background-size: cover;
   padding: 200px 0 310px;
 }
@@ -8459,7 +8459,7 @@ tr {
   gap: 12px;
 }
 .page-title.home04 {
-  background-image: url(../images/section/page-title-4.jpg);
+  background-image: url(../../Assests/images/section/page-title-4.jpg);
   padding: 112px 0 207px;
   background-size: cover;
 }
@@ -8477,7 +8477,7 @@ tr {
   flex-grow: 1;
 }
 .page-title.home05 {
-  background-image: url(../images/section/page-title-5.jpg);
+  background-image: url(../../Assests/images/section/page-title-5.jpg);
   padding: 237px 0 300px;
   background-size: cover;
 }
@@ -8486,7 +8486,7 @@ tr {
 }
 .page-title.style-2 {
   padding: 132px 0 232px;
-  background-image: url(../images/section/page-title-loan.jpg);
+  background-image: url(../../Assests/images/section/page-title-loan.jpg);
   background-size: cover;
 }
 .page-title.style-2::after {
@@ -8496,7 +8496,7 @@ tr {
   color: var(--Heading);
 }
 .page-title.career {
-  background-image: url(../images/section/page-title-career.jpg);
+  background-image: url(../../Assests/images/section/page-title-career.jpg);
   background-size: cover;
   padding: 384px 0 0;
   background-repeat: no-repeat;
@@ -8603,7 +8603,7 @@ tr {
   content: "";
   width: 100%;
   height: 100%;
-  background-image: url(../images/section/cta-4.png);
+  background-image: url(../../Assests/images/section/cta-4.png);
   left: 0;
   top: 0;
 }
@@ -8640,7 +8640,7 @@ tr {
 /*section-realty
 ===============================================================================*/
 .section-realty {
-  background-image: url(../images/section/section-realty.jpg);
+  background-image: url(../../Assests/images/section/section-realty.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -9025,7 +9025,7 @@ tr {
 /*section-appraisal
 ===============================================================================*/
 .section-appraisal.style-2 .wg-appraisal .content::after {
-  background-image: url(../images/section/cta-3.png);
+  background-image: url(../../Assests/images/section/cta-3.png);
 }
 
 /*section-sale
@@ -9039,7 +9039,7 @@ tr {
 .section-sale .box-sale::after {
   content: "";
   position: absolute;
-  background-image: url(../images/section/section-sale.png);
+  background-image: url(../../Assests/images/section/section-sale.png);
   width: 100%;
   height: 100%;
   top: 0;

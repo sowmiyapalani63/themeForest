@@ -1,0 +1,53 @@
+/* ---------------------------------------------------------
+    * Name: 
+    * Version: 1.0.1
+    * Author: Themesflat
+    * Author URI: http://themesflat.com 
+
+	* Abstracts variable
+    
+    * Reset css styles
+
+    * Components
+
+    * Widgets
+
+        Header
+        Footer
+        Tabs
+        Button
+        Range-slider
+        Form
+        Slider
+        Pop-up
+        Dashboard
+        Blog
+        Testimonial
+        Accordion
+        Map
+        Nice-select
+        Animation
+        Color-themes
+
+    * section
+
+    * Responsive
+ ------------------------------------------------------------------------------ */
+
+/*--------- Abstracts variable ---------- */
+@import "./abstracts/index";
+
+/*---------- Reset css styles ----------- */
+@import "reset";
+
+/*------------ Components ---------------- */
+@import "./component/index";
+
+/*------------ widgets ---------------- */
+@import "./widgets";
+
+/*------------ sections ---------------- */
+@import "./sections";
+
+/*-------------- Responsive ----------------- */
+@import "./responsive";
