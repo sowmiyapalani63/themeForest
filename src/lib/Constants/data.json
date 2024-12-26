@@ -1,0 +1,64 @@
+{
+    "properties": [
+      {
+        "image": "box-house-11.jpg",
+        "title": "Elegant studio flat",
+        "location": "Ingraham St, Brooklyn, NY 11237",
+        "beds": 3,
+        "baths": 3,
+        "sqft": 4043,
+        "price": "$8,600",
+        "statusTags": ["Featured", "For Sale"]
+      },
+      {
+        "image": "box-house-11.jpg",
+        "title": "Modern family home",
+        "location": "Maple Ave, Los Angeles, CA 90001",
+        "beds": 4,
+        "baths": 2,
+        "sqft": 3500,
+        "price": "$12,000",
+        "statusTags": ["Featured", "For Rent"]
+      },
+      {
+        "image": "box-house-11.jpg",
+        "title": "Cozy downtown condo",
+        "location": "Main St, Dallas, TX 75201",
+        "beds": 2,
+        "baths": 2,
+        "sqft": 2200,
+        "price": "$3,400",
+        "statusTags": ["For Sale"]
+      },
+      {
+        "image": "box-house-11.jpg",
+        "title": "Luxury villa",
+        "location": "Ocean Dr, Miami, FL 33139",
+        "beds": 6,
+        "baths": 5,
+        "sqft": 7500,
+        "price": "$25,000",
+        "statusTags": ["Featured", "For Sale"]
+      },
+      {
+        "image": "box-house-11.jpg",
+        "title": "Luxury villa",
+        "location": "Ocean Dr, Miami, FL 33139",
+        "beds": 6,
+        "baths": 5,
+        "sqft": 7500,
+        "price": "$25,000",
+        "statusTags": ["Featured", "For Sale"]
+      },
+      {
+        "image": "box-house-11.jpg",
+        "title": "Luxury villa",
+        "location": "Ocean Dr, Miami, FL 33139",
+        "beds": 6,
+        "baths": 5,
+        "sqft": 7500,
+        "price": "$25,000",
+        "statusTags": ["Featured", "For Sale"]
+      }
+    ]
+  }
