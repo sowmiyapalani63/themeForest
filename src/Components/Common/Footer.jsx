@@ -67,7 +67,7 @@ const Footer = () => {
                                     <h5 class="title lh-30 title-desktop">About us</h5>
                                     <h5 class="title lh-30 title-mobile">About us</h5>
                                     <ul class="tf-collapse-content">
-                                        <li><a href="contact.html">Contact</a></li>
+                                        <li><a href="/">Contact</a></li>
                                         <li><a href="service-details.html">Why choose us?</a></li>
                                         <li><a href="#">Customer reviews</a></li>
                                         <li><a href="agents.html">Our team</a></li>

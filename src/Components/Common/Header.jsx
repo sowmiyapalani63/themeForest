@@ -1,5 +1,6 @@
 import React from 'react'
 import logo2 from '../../Assests/images/logo/logo@2x.png'
+import { Link } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -18,10 +19,10 @@ const Header = () => {
                             <ul class="navigation ">
                                 <li class="has-child"><a href="#">Home</a>
                                     <ul class="submenu">
-                                        <li><a href="index.html">Home Page 01</a></li>
-                                        <li><a href="home02.html">Home Page 02</a></li>
-                                        <li><a href="home03.html">Home Page 03</a></li>
-                                        <li><a href="home04.html">Home Page 04</a></li>
+                                        <li><a href="/">Home Page 01</a></li>
+                                        <li><a href="/Home2">Home Page 02</a></li>
+                                        <li><a href="/Home3">Home Page 03</a></li>
+                                        <li><a href="/Home4">Home Page 04</a></li>
                                         <li><a href="home05.html">Home Page 05</a></li>
                                     </ul>
                                 </li>
@@ -35,7 +36,7 @@ const Header = () => {
                                                         Full Width </a>
                                                 </li>
                                                 <li>
-                                                    <a href="property-gird-top-search.html">Grid Style - Top
+                                                    <a href="property-gird-top-search">Grid Style - Top
                                                         Search </a>
                                                 </li>
                                                 <li>
@@ -52,7 +53,7 @@ const Header = () => {
                                                         Width </a>
                                                 </li>
                                                 <li>
-                                                    <a href="property-list-top-search.html">List Style -
+                                                    <a href="/property-list-top-search">List Style -
                                                         Top
                                                         Search
                                                     </a>
@@ -102,9 +103,9 @@ const Header = () => {
                                         <li>
                                             <a href="#">Listing Details</a>
                                             <ul class="submenu2">
-                                                <li><a href="property-detail-v1.html">Property Details 1</a>
+                                                <li><a href="/property-detail-v1">Property Details 1</a>
                                                 </li>
-                                                <li><a href="property-detail-v2.html">Property Details 2</a>
+                                                <li><a href="/property-detail-v2">Property Details 2</a>
                                                 </li>
                                                 <li><a href="property-detail-v3.html">Property Details 3</a>
                                                 </li>
@@ -153,7 +154,8 @@ const Header = () => {
                                         <li><a href="blog-details.html">Blog Detail</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><Link to="/Contact">Contact</Link></li>
+
                             </ul>
                         </nav>
                         <div class="header-right">
