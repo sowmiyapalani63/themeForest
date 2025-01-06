@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import boxhouse from '../../Assests/images/section/box-house.jpg'
 import boxhouse2 from '../../Assests/images/section/box-house-2.jpg'
 import boxhouse3 from '../../Assests/images/section/box-house-3.jpg'
@@ -13,8 +13,13 @@ import boxhouse9 from '../../Assests/images/section/box-house-9.jpg'
 import boxhouse14 from '../../Assests/images/section/box-house-14.jpg'
 import boxhouse15 from '../../Assests/images/section/box-house-15.jpg'
 import boxhouse16 from '../../Assests/images/section/box-house-16.jpg'
+import ListLayout from './ListLayout';
 
 const TopsearchCards = () => {
+    const [activeTab, setActiveTab] = useState('tab1'); 
+  const handleTabClick = (tab) => {
+    setActiveTab(tab); 
+  };
     return (
         <div class="main-content">
 
@@ -28,7 +33,7 @@ const TopsearchCards = () => {
                                 <div class="right">
 
                                     <ul class="nav-tab-filter group-layout" role="tablist">
-                                        <li class="nav-tab-item" role="presentation">
+                                        <li class="nav-tab-item" role="presentation"  >
                                             <a href="#gridLayout" class=" btn-layout grid nav-link-item "
                                                 data-bs-toggle="tab">
                                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
@@ -64,7 +69,7 @@ const TopsearchCards = () => {
 
                                             </a>
                                         </li>
-                                        <li class="nav-tab-item" role="presentation">
+                                        <li class="nav-tab-item" role="presentation"  >
                                             <a href="#listLayout" class="nav-link-item btn-layout list active"
                                                 data-bs-toggle="tab">
                                                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none"
@@ -101,7 +106,7 @@ const TopsearchCards = () => {
                                     </div>
                                 </div>
                             </div>
-
+                             
                             <div class="flat-animate-tab">
                                 <div class="tab-content">
                                     <div class="tab-paneactive show " id="gridLayout" role="tabpanel">

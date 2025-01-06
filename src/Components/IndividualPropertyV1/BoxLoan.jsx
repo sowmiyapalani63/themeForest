@@ -1,6 +1,16 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react';
+import $ from 'jquery';
+
+window.jQuery = window.$ = $;
+require('jquery-nice-select');
+
 
 const BoxLoan = () => {
+    const selectRef = useRef();
+
+    useEffect(() => {
+        $(selectRef.current).niceSelect(); 
+    }, []);
     return (
         <div>
             <div className="wg-property box-loan">

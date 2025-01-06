@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import $ from 'jquery';
+
+window.jQuery = window.$ = $;
+require('jquery-nice-select');
+
 
 
 const ContactForm = () => {
+  const selectRef = useRef();
+
+    useEffect(() => {
+        $(selectRef.current).niceSelect(); 
+    }, []);
   return (
     <section className="section-top-map style-2">
       <div className="wrap-map">

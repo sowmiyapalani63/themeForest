@@ -1,6 +1,12 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
+import '../../Styles/css/animate.min.css';
+import '../../Styles/css/bootstrap.css';
+import '../../Styles/css/styles.css';
+import '../../Styles/css/odometer.min.css';
+import '../../Assests/icons/icomoon/style.css';
+
 
 const WorkTogetherSection = () => {
     return (

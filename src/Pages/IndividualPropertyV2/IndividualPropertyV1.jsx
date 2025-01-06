@@ -1,5 +1,5 @@
 import React from 'react'
-import SectionPropertyImage from '../../Components/IndividualPropertyV1/ImageSection'
+import SectionPropertyImage from '../../Components/IndividualPropertyV2/ImageSection'
 import InidividualDetails from '../../Components/IndividualPropertyV1/inidividualDetails'
 import SectionOpinion from '../../Components/IndividualPropertyV1/SectionOpinion'
 

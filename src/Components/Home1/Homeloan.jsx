@@ -1,7 +1,20 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react';
 import approved from '../../Assests/images/section/section-pre-approved.jpg'
+import $ from 'jquery';
+
+window.jQuery = window.$ = $;
+require('jquery-nice-select');
+
+
 
 const Homeloan = () => {
+    const selectRef = useRef();
+
+    useEffect(() => {
+        $(selectRef.current).niceSelect(); 
+    }, []);
+
+    
   return (
     <section class="section-pre-approved tf-spacing-1">
     <div class="tf-container">

@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 import FormContactSeller from '../IndividualPropertyV1/FormContactSeller'
 import NeedHelp from './NeedHelp'
+import '../../Styles/css/bootstrap.css';
+import '../../Styles/css/styles.css';
+import '../../Styles/scss/component/_accordion.scss'
+
 
 const Accordians = () => {
 
     const [activeItem, setActiveItem] = useState(null);
 
-    // Toggle the FAQ item open or closed
+ 
     const handleToggle = (itemId) => {
-        setActiveItem(activeItem === itemId ? null : itemId); // Toggle between open and close
+        setActiveItem(activeItem === itemId ? null : itemId); 
     };
 
     return (
@@ -16,6 +20,7 @@ const Accordians = () => {
             <div class="tf-container">
                 <div class="row">
                     <div class="col-xl-8 col-lg-7">
+                        
                         <div class="heading-section  mb-48">
                             <h2 class="title ">Frequently Asked Questions</h2>
                         </div>

@@ -18,7 +18,10 @@ const InidividualDetails = () => {
         <div>
             <section className="section-property-detail ">
                 <div className="tf-container">
+                    
                     <div className="row">
+                    
+                       
                         
                         <div className="col-xl-8 col-lg-7">
                             <WgProperty />

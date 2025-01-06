@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react';
 import TopsearchCards from './TopsearchCards'
 import Head from './Head'
 
+import $ from 'jquery';
+
+window.jQuery = window.$ = $;
+require('jquery-nice-select');
+
+
 
 const Topsearch = () => {
+    const selectRef = useRef();
+
+    useEffect(() => {
+        $(selectRef.current).niceSelect(); 
+    }, []);
+
     return (
         <>
         <section class="flat-title style-2">

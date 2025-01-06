@@ -1,3 +1,6 @@
+@import '../scss/abstracts/variable';
+@import '../scss/abstracts/mixin';
+
 .wg-pagination {
     @include d-flex();
     margin-top: 30px;
