@@ -1,15 +1,12 @@
-import React, { useState,useEffect, useRef } from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import ReactSlider from "react-slider";
-import $ from 'jquery';
-import 'jquery-nice-select';
-window.jQuery = window.$ = $;
-require('jquery-nice-select');
-const Search = () => {  
 
+const Search = () => {
+   
     const [propertyType, setPropertyType] = useState("");
     const [location, setLocation] = useState("");
     const [priceRange, setPriceRange] = useState([100, 500]); 
@@ -18,23 +15,14 @@ const Search = () => {
     const [rooms, setRooms] = useState("2");
     const [baths, setBaths] = useState("2");
     const [beds, setBeds] = useState("2");
-    const selectRefs = useRef([]);
-
-    useEffect(() => {
-        selectRefs.current.forEach(ref => {
-            if (ref) {
-                $(ref).niceSelect(); 
-            }
-        });
-    }, []);
 
 
 
+    
     const handleSearch = () => {
-
         console.log("Selected Property Type:", propertyType);
         console.log("Selected Location:", location);
-        
+       
     };
 
     const amenitiesList = [
@@ -46,10 +34,11 @@ const Search = () => {
 
     const [selectedAmenities, setSelectedAmenities] = useState([]);
 
+   
     const handleCheckboxChange = (amenity) => {
         setSelectedAmenities((prev) =>
             prev.includes(amenity)
-                ? prev.filter((item) => item !== amenity)
+                ? prev.filter((item) => item !== amenity) 
                 : [...prev, amenity] 
         );
     };
@@ -85,6 +74,7 @@ const Search = () => {
                                                 </fieldset>
                                             </form>
 
+                                            
                                             <select 
                                                 className="dropdown nice-select"
                                                 value={propertyType}
@@ -99,7 +89,7 @@ const Search = () => {
                                                 <option value="villa">Villa</option>
                                             </select>
 
-                                           
+                                            
                                             <select 
                                                 className="dropdown nice-select"
                                                 value={location}
@@ -145,7 +135,7 @@ const Search = () => {
             </div>
             
 
-             
+                
       {isOpen && (
         <div class="wd-search-form show mx-auto pt-5 mt-5">
         <div className="toggle-content">
@@ -162,17 +152,23 @@ const Search = () => {
                 </div>
             </div>
             <ReactSlider
-                className="slider"
-                thumbClassName="thumb"
-                trackClassName="track"
-                value={priceRange}
-                min={0}
-                max={1000}
-                step={10}
-                onChange={setPriceRange}
-                pearling
-                minDistance={50}
-            />
+        className="slider"
+        thumbClassName="thumb"
+        trackClassName="track"
+        value={priceRange}
+        min={0}
+        max={1000}
+        step={10}
+        onChange={setPriceRange}
+        pearling
+        minDistance={50}
+        renderTrack={(props, state) => (
+          <div
+            {...props}
+            className={`track ${state.index === 1 ? "track-active" : "track-inactive"}`}
+          />
+        )}
+      />
         </div>
 
        
@@ -187,17 +183,23 @@ const Search = () => {
                 </div>
             </div>
             <ReactSlider
-                className="slider"
-                thumbClassName="thumb"
-                trackClassName="track"
-                value={sizeRange}
-                min={0}
-                max={1000}
-                step={10}
-                onChange={setSizeRange}
-                pearling
-                minDistance={50}
+          className="slider"
+          thumbClassName="thumb"
+          trackClassName="track"
+          value={sizeRange}
+          min={500}
+          max={5000}
+          step={100}
+          onChange={(value) => setSizeRange(value)}
+          pearling
+          minDistance={200}
+          renderTrack={(props, state) => (
+            <div
+              {...props}
+              className={`track ${state.index === 1 ? "track-active" : "track-inactive"}`}
             />
+          )}
+        />
         </div>
     </div>
 
@@ -220,7 +222,7 @@ const Search = () => {
         </div>
     </div>
     <div className="group-select pt-5"> 
-
+       
         <div className="box-select">
             <select className="nice-select" value={province} onChange={(e) => setProvince(e.target.value)}>
                 <option value="California">California</option>
@@ -245,7 +247,7 @@ const Search = () => {
             </select>
         </div>
 
-      
+       
         <div className="box-select">
             <select className="nice-select" value={baths} onChange={(e) => setBaths(e.target.value)}>
                 {[1, 2, 3, 4].map((num) => (

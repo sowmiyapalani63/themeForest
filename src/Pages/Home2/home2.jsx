@@ -14,7 +14,7 @@ import Opinion from '../../Components/Home02/opinion';
 
 const Home2 = () => {
   return (
-   <>
+   <div className='theme-color-1'>
    <Homesearch />
    <Categories />
    <Trusted />
@@ -26,7 +26,7 @@ const Home2 = () => {
    <Appraisal />
    <Worktogether />
    <Opinion />  
-   </>
+   </div>
   )
 }
 
