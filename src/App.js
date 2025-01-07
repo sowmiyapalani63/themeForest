@@ -6,6 +6,7 @@ import HomePage from './Pages/Home1/Homepage1';
 import Home2 from './Pages/Home2/home2';
 import Home3  from './Pages/Home3/home3'; 
 import Home04  from './Pages/Home4/home4'; 
+import Home05 from './Pages/Home5/Home5'
 import Header from './Components/Common/Header';
 import FooterHead from './Components/Common/FooterHead';
 import Footer from './Components/Common/Footer';
@@ -29,6 +30,7 @@ function App() {
           <Route path="/Home2" element={<Home2 />} />
           <Route path="/Home3" element={<Home3 />} />
           <Route path="/Home4" element={<Home04 />} />
+          <Route path="/Home5" element={<Home05 />} />
           <Route path="/property-gird-top-search" element={<Layout />} />
 
           <Route path="/Property-detail-v1" element={<IndividualPropertyV1/>} />

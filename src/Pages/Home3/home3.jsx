@@ -1,5 +1,5 @@
 import React from 'react'
-import Homesearch from '../../Components/Home02/Homesearch'
+import Homesearch from '../../Components/Home03/Homesearch'
 import Help from '../../Components/Home03/help'
 import Appraisal from '../../Components/Home03/appraisal'
 import Categories from '../../Components/Home03/Categories'
@@ -13,7 +13,7 @@ import Opinion from '../../Components/Home02/opinion'
 
 const Home3 = () => {
   return (
-    <>
+    <div className='theme-color-2'>
     <Homesearch />
     <Help />
     <Appraisal />
@@ -25,7 +25,7 @@ const Home3 = () => {
     <Testimonials />
     <Worktogether />
     <Opinion />
-    </>
+    </div>
   )
 }
 

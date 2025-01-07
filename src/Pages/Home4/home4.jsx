@@ -1,5 +1,5 @@
 import React from 'react'
-import Homesearch from '../../Components/Home02/Homesearch'
+import Homesearch from '../../Components/Home04/Homesearch'
 import Boxteam from '../../Components/Home04/boxteam'
 import Categories from '../../Components/Home03/Categories'
 import Popularsearch from '../../Components/Home02/popularsearch'
@@ -14,7 +14,7 @@ import Opinion from '../../Components/Home02/opinion'
 
 const Home04 = () => {
     return (
-        <>
+        <div className='theme-color-3'>
         <Homesearch />
         <Boxteam />
         <Categories />
@@ -27,7 +27,7 @@ const Home04 = () => {
         <Worktogether />
         <Salesection />
         <Opinion />
-        </>
+        </div>
     )
 }
 

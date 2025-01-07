@@ -50,7 +50,7 @@ const Search = () => {
   };
 
     return (
-        <div className="page-title home02">
+        <div className="page-title home05">
             <div className="tf-container">
                 <div className="row">
                     <div className="col-12">

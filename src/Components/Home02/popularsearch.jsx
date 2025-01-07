@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import '../../Styles/css/animate.min.css';
 import '../../Styles/css/bootstrap.css';
 import '../../Styles/css/styles.css';
@@ -12,6 +12,11 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
 
 const Popularsearch = () => {
+  const [themeColor, setThemeColor] = useState("#f1913d");
+  const updateThemeColor = (color) => {
+    document.documentElement.style.setProperty("--theme-primary", color);
+    setThemeColor(color);
+};
   return (
     <section className="section-popular-searches tf-spacing-1">
       <div className="tf-container md">
@@ -77,7 +82,8 @@ const Popularsearch = () => {
                           {property.statusTags.map((tag, idx) => (
                             <li
                               key={idx}
-                              className={`flat-tag text-4 fw-6 text-white bg-${idx + 1}`}
+                              className={`flat-tag text-4 fw-6 text-white bg-${idx + 1}`
+                            }
                             >
                               {tag}
                             </li>
