@@ -1,23 +1,28 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { Navigation, Pagination } from 'swiper/modules';
-import { useMediaQuery } from 'react-responsive';
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Pagination } from "swiper/modules";
+import { useMediaQuery } from "react-responsive";
+import SplitText from "../Common/SplitText";
+import AnimatedContent from "../Common/AnimatedContent";
 
 const Categories = () => {
-    const isSmallScreen = useMediaQuery({ maxWidth: 576 }); // Define small screen size
+    const isSmallScreen = useMediaQuery({ maxWidth: 576 });
 
     const categories = [
-        { iconClass: 'icon-apartment1', name: 'Apartment', listings: 476 },
-        { iconClass: 'icon-villa', name: 'Villa', listings: 476 },
-        { iconClass: 'icon-studio', name: 'Studio', listings: 476 },
-        { iconClass: 'icon-apartment1', name: 'Apartment', listings: 476 },
-        { iconClass: 'icon-villa', name: 'Villa', listings: 476 },
-        { iconClass: 'icon-studio', name: 'Studio', listings: 476 },
-        // Add more categories as needed
+        { iconClass: "icon-apartment1", name: "Apartment", listings: 476 },
+        { iconClass: "icon-villa", name: "Villa", listings: 476 },
+        { iconClass: "icon-studio", name: "Studio", listings: 476 },
+        { iconClass: "icon-apartment1", name: "Apartment", listings: 476 },
+        { iconClass: "icon-villa", name: "Villa", listings: 476 },
+        { iconClass: "icon-studio", name: "Studio", listings: 476 },
     ];
+
+    const handleAnimationComplete = () => {
+        console.log("H2 title has animated!");
+    };
 
     return (
         <section className="section-categories tf-spacing-1">
@@ -25,14 +30,38 @@ const Categories = () => {
                 <div className="row">
                     <div className="col-12">
                         <div className="heading-section text-center mb-48">
-                            <h2 className="title text-anime-wave">Property Type</h2>
-                            <p className="text-1 animate__fadeInUp animate__animated" data-wow-duration="1.5s" data-wow-delay="0s">
-                                Thousands of luxury home enthusiasts just like you visit our website.
-                            </p>
+
+                                <SplitText
+                                    text="Property Type"
+                                    className="title text-anime-wave"
+                                    delay={50}
+                                    animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
+                                    animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+                                    easing="easeOutCubic"
+                                    threshold={0.2}
+                                    rootMargin="-50px"
+                                    onLetterAnimationComplete={handleAnimationComplete}
+
+                                />
+                                <AnimatedContent
+                                    distance={5}
+                                    direction="vertical"
+                                    reverse={false}
+                                    config={{ tension: 80, friction: 20 }}
+                                    initialOpacity={0.2}
+                                    animateOpacity
+                                    scale={1.1}
+                                    threshold={0.2}
+                                >
+                                    <p
+                                        className="text-1 animate__fadeInUp animate__animated">
+                                        Thousands of luxury home enthusiasts just like you visit our
+                                        website.
+                                    </p>
+                                </AnimatedContent>
                         </div>
                         <div className="gap-10px">
                             {isSmallScreen ? (
-                                // Swiper for small screens
                                 <Swiper
                                     modules={[Pagination]}
                                     spaceBetween={15}
@@ -160,6 +189,3 @@ const Categories = () => {
 };
 
 export default Categories;
-
-
-

@@ -1,36 +1,61 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import '../../Styles/css/animate.min.css';
 import '../../Styles/css/bootstrap.css';
 import '../../Styles/css/styles.css';
 import '../../Styles/css/odometer.min.css';
 import '../../Assests/icons/icomoon/style.css';
-import propertiesData from '../../lib/Constants/data.json'
+import propertiesData from '../../lib/Constants/data.json';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Navigation, Pagination } from 'swiper/modules';
+import SplitText from "../Common/SplitText";
+import AnimatedContent from "../Common/AnimatedContent";
 
 const Popularsearch = () => {
   const [themeColor, setThemeColor] = useState("#f1913d");
+
   const updateThemeColor = (color) => {
     document.documentElement.style.setProperty("--theme-primary", color);
     setThemeColor(color);
-};
+  };
+
+  const handleAnimationComplete = () => {
+    console.log("H2 title has animated!");
+  };
+
   return (
     <section className="section-popular-searches tf-spacing-1">
       <div className="tf-container md">
         <div className="row">
           <div className="col-12">
             <div className="heading-section text-center mb-48">
-              <h2 className="title text-anime-wave">Popular Searches</h2>
-              <p
-                className="text-1 animate__fadeInUp animate__animated"
-                data-wow-duration="1.5s"
-                data-wow-delay="0s"
+              <SplitText
+                text="Popular Searches"
+                className="title text-anime-wave"
+                delay={50}
+                animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
+                animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+                easing="easeOutCubic"
+                threshold={0.2}
+                rootMargin="-50px"
+                onLetterAnimationComplete={handleAnimationComplete}
+              />
+              <AnimatedContent
+                distance={5}
+                direction="vertical"
+                reverse={false}
+                config={{ tension: 80, friction: 20 }}
+                initialOpacity={0.2}
+                animateOpacity
+                scale={1.1}
+                threshold={0.2}
               >
+                <p className="text-1 animate__fadeInUp animate__animated">
                 Thousands of luxury home enthusiasts just like you visit our website.
-              </p>
+                </p>
+              </AnimatedContent>
             </div>
             <div className="widget-tabs style-2">
               <ul className="widget-menu-tab mb-48 overflow-x-auto">
@@ -39,7 +64,7 @@ const Popularsearch = () => {
                   <span className="tooltip">10 Listing</span>
                 </li>
                 <li className="item-title hover-tooltip">
-                  Oklahome
+                  Oklahoma
                   <span className="tooltip">9 Listing</span>
                 </li>
                 <li className="item-title hover-tooltip">
@@ -82,8 +107,7 @@ const Popularsearch = () => {
                           {property.statusTags.map((tag, idx) => (
                             <li
                               key={idx}
-                              className={`flat-tag text-4 fw-6 text-white bg-${idx + 1}`
-                            }
+                              className={`flat-tag text-4 fw-6 text-white bg-${idx + 1}`}
                             >
                               {tag}
                             </li>
@@ -109,13 +133,13 @@ const Popularsearch = () => {
                         </p>
                         <ul className="meta-list flex">
                           <li className="text-1 flex">
-                            <span>{property.beds}</span>Beds
+                            <span>{property.beds}</span> Beds
                           </li>
                           <li className="text-1 flex">
-                            <span>{property.baths}</span>Baths
+                            <span>{property.baths}</span> Baths
                           </li>
                           <li className="text-1 flex">
-                            <span>{property.sqft}</span>Sqft
+                            <span>{property.sqft}</span> Sqft
                           </li>
                         </ul>
                         <div className="bot flex justify-between items-center">

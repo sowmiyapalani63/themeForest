@@ -1,7 +1,9 @@
 
+import React, { useEffect } from 'react';
+
 import PreLoader from './Components/Common/PreLoader';
 import Agents from './Pages/Agents/Agents';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import HomePage from './Pages/Home1/Homepage1';
 import Home2 from './Pages/Home2/home2';
 import Home3  from './Pages/Home3/home3'; 
@@ -19,12 +21,14 @@ import Layout from './Pages/Listing/Layout'
 
 
 
+
 function App() {
+ 
   return (
     <>
       <Router>
-        <Header />
-        <PreLoader />
+      <Header />
+      <PreLoader/>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/Home2" element={<Home2 />} />

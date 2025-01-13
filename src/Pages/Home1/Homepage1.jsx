@@ -1,6 +1,5 @@
 import React from 'react';
 import Home1 from '../../Components/Home1/Head'
-
 import Cards from '../../Components/Home1/Cardds';
 import Propertycards from '../../Components/Home1/Propertycards';
 import Help from '../../Components/Home1/Help'

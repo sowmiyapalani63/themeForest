@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-spring/web": "^9.7.5",
+    "animate.css": "^4.1.1",
     "cra-template": "1.2.0",
     "jquery": "^3.7.1",
     "jquery-nice-select": "^1.1.0",
@@ -19,7 +21,7 @@
     "react-router-dom": "^7.1.1",
     "react-scripts": "5.0.1",
     "react-slider": "^2.0.6",
-    "swiper": "^11.1.15",
+    "swiper": "^11.2.1",
     "web-vitals": "^4.2.4",
     "yet-another-react-lightbox": "^3.21.7"
   },

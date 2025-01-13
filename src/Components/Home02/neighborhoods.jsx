@@ -11,6 +11,8 @@ import '../../Styles/css/odometer.min.css';
 import '../../Assests/icons/icomoon/style.css';
 import location9 from '../../Assests/images/section/location-9.jpg';
 import location16 from '../../Assests/images/section/location-16.jpg';
+import SplitText from "../Common/SplitText";
+import AnimatedContent from "../Common/AnimatedContent";
 
 const Neighborhoods = () => {
     const neighborhoods = [
@@ -20,21 +22,43 @@ const Neighborhoods = () => {
         { id: 4, img: location16, title: 'San Francisco', properties: '786 Properties' },
         { id: 5, img: location9, title: 'Seattle', properties: '412 Properties' },
     ];
+    const handleAnimationComplete = () => {
+        console.log("H2 title has animated!");
+    };
 
     return (
-        <section className="section-neighborhoods style-2">
+        <section className="section-neighborhoods  tf-spacing-1 style-2">
             <div className="tf-container full">
                 <div className="row">
                     <div className="col-12">
                         <div className="heading-section mb-46 text-center">
-                            <h2 className="title text-anime-wave">Explore The Neighborhoods</h2>
-                            <p
-                                className="text-1  animate__fadeInUp animate__animated"
-                                data-wow-duration="1.5s"
-                                data-wow-delay="0s"
+                            <SplitText
+                                text="Explore The Neighborhoods"
+                                className="title text-anime-wave"
+                                delay={50}
+                                animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
+                                animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
+                                easing="easeOutCubic"
+                                threshold={0.2}
+                                rootMargin="-50px"
+                                onLetterAnimationComplete={handleAnimationComplete}
+
+                            />
+                            <AnimatedContent
+                                distance={5}
+                                direction="vertical"
+                                reverse={false}
+                                config={{ tension: 80, friction: 20 }}
+                                initialOpacity={0.2}
+                                animateOpacity
+                                scale={1.1}
+                                threshold={0.2}
                             >
-                                Discover the best properties in the most iconic neighborhoods.
-                            </p>
+                                <p
+                                    className="text-1 animate__fadeInUp animate__animated">
+                                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel lobortis justo
+                                </p>
+                            </AnimatedContent>
                         </div>
                         <Swiper
                             modules={[Navigation, Pagination]}
