@@ -2,7 +2,7 @@ import React from 'react';
 import Home1 from '../../Components/Home1/Head'
 import Cards from '../../Components/Home1/Cardds';
 import Propertycards from '../../Components/Home1/Propertycards';
-import Help from '../../Components/Home1/Help'
+import DiscoverHelp from '../../Components/Home1/Help'
 import Homeloan from '../../Components/Home1/Homeloan';
 import Neighbour from '../../Components/Home1/Neighbour';
 import HouseListing from '../../Components/Home1/HouseListing';
@@ -19,7 +19,7 @@ const HomePage = () => {
     <Home1 />
     <Cards />
     <Propertycards />
-    <Help />
+    <DiscoverHelp />
     <Homeloan />
     <Neighbour />
     <HouseListing />

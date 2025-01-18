@@ -10769,27 +10769,33 @@ tr {
 }
 .container {
   position: relative;
-  /* overflow: hidden;
-  height: 100px; 
-  width: 100%; */
 }
 
 .svg-box {
-  
   animation: moveX 5s infinite linear; 
 }
 
-.svg1 { animation-delay: 0s; left: 0; }
-.svg2 { animation-delay: 0.5s; left: 50px; }
-.svg3 { animation-delay: 1s; left: 100px; }
-.svg4 { animation-delay: 1.5s; left: 150px; }
-.svg5 { animation-delay: 2s; left: 200px; }
+.svg1 { animation-delay: 0s; }
+.svg2 { animation-delay: 5s; }
+.svg3 { animation-delay: 10s; }
+.svg4 { animation-delay: 15s; }
+.svg5 { animation-delay: 20s; }
 
 @keyframes moveX {
   0% {
-    transform: translateX(0);
+    transform: translateX(-100%);
+    opacity: 0; 
+  }
+  20% {
+    transform: translateX(0); 
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(0); 
+    opacity: 1; 
   }
   100% {
-    transform: translateX(500px);
+    transform: translateX(100%); 
+    opacity: 0;
   }
 }

@@ -8,7 +8,7 @@ const Why = () => {
         console.log("H2 title has animated!");
     };
     return (
-        <section class="section-why">
+        <section class="section-why tf-spacing-1">
                 <div class="tf-container">
                     <div class="row">
                         <div class="col-12">

@@ -3,7 +3,7 @@ import 'animate.css';
 import SplitText from "./../Common/SplitText";
 import AnimatedContent from '../Common/AnimatedContent';
 
-const Help = () => {
+const DiscoverHelp = () => {
     const [isAnimated, setIsAnimated] = useState(false);
 
 
@@ -188,4 +188,4 @@ const Help = () => {
     )
 }
 
-export default Help
+export default DiscoverHelp

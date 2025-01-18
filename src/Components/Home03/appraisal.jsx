@@ -8,7 +8,7 @@ const Appraisal = () => {
         console.log("H2 title has animated!");
     };
     return (
-        <section class="section-appraisal style-2">
+        <section class="section-appraisal style-2 tf-spacing-1">
             <div class="wg-appraisal style-3">
                 <div class="tf-container">
                     <div class="row">

@@ -305,7 +305,9 @@ mark,
 ins {
   text-decoration: none;
 }
-
+.swiper{
+  margin-bottom: 40px !important;
+}
 sup,
 sub {
   font-size: 75%;
@@ -2968,6 +2970,8 @@ form label {
   display: -webkit-flex;
   display: flex;
   gap: 20px;
+  justify-content: center;
+  padding-top: 10px;
 }
 .style-pagination .swiper-pagination.pagination-layout {
   display: none;

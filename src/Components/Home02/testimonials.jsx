@@ -88,20 +88,20 @@ const Testimonials = () => {
                             </AnimatedContent>  
                         </div>
                         <Swiper
-                            modules={[Navigation, Pagination]}
+                            modules={[Navigation]}
                             slidesPerView={3}
                             spaceBetween={30}
                             navigation={{
                                 nextEl: '.swiper-button-next',
                                 prevEl: '.swiper-button-prev',
                             }}
-                            pagination={{ clickable: true }}
+                        
                             breakpoints={{
                                 320: { slidesPerView: 1 },
                                 768: { slidesPerView: 2 },
                                 1024: { slidesPerView: 3 },
                             }}
-                            className="swiper sw-testimonials style-pagination"
+                            className="swiper sw-testimonials mb-[40px]"
                         >
                             {testimonials.map((testimonial) => (
                                 <SwiperSlide key={testimonial.id}>

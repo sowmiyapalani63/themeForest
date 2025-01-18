@@ -11,7 +11,7 @@ const Worktogether = () => {
         console.log("H2 title has animated!");
     };
     return (
-        <section class="section-work-together style-2 tf-spacing-1 pb-0 ">
+        <section class="section-work-together style-2 tf-spacing-1 ">
             <div class="wg-partner">
                 <div class="tf-container container">
                     <div class="row">
